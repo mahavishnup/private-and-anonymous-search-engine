@@ -219,6 +219,6 @@ function followLinks($url) {
 
 }
 
-$startUrl = "https://www.foxnews.com/";
+$startUrl = "https://open.spotify.com/playlist/1G8IpkZKobrIlXcVPoSIuf";
 followLinks($startUrl);
 ?>
