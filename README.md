@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="./assets/images/moodleLogo.png" alt="Bot logo"></a>
+ <img width=200px height=200px src="./assets/images/moodleLogo.png" alt="logo"></a>
 </p>
 
 <h3 align="center">Moodle</h3>

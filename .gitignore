@@ -1,0 +1,33 @@
+/vendor/
+node_modules/
+npm-debug.log
+yarn-error.log
+
+.vscode
+.idea
+
+brave-resources
+resources
+2e5271f39037321129f1275dd145d735.svg
+brave_new_tab.bundle.js
+strings.js
+text.html
+
+# Laravel 4 specific
+bootstrap/compiled.php
+app/storage/
+
+# Laravel 5 & Lumen specific
+public/storage
+public/hot
+
+# Laravel 5 & Lumen specific with changed public path
+public_html/storage
+public_html/hot
+
+storage/*.key
+.env
+Homestead.yaml
+Homestead.json
+/.vagrant
+.phpunit.result.cache
