@@ -52,18 +52,19 @@ class SiteResultsProvider {
 			$title = $row["title"];
 			$description = $row["description"];
 
-			$title = $this->trimField($title, 55);
+			$url1 = $this->trimField($url, 70);
+			$title = $this->trimField($title, 100);
 			$description = $this->trimField($description, 230);
 			
-			$resultsHtml .= "<div class='resultContainer'>
+			$resultsHtml .= "<div class='resultContainer' style='word-wrap: break-word;width:85%'>
 
 								<h3 class='title'>
 									<a class='result' href='$url' data-linkId='$id'>
 										$title
 									</a>
 								</h3>
-								<span class='url'>$url</span>
-								<span class='description'>$description</span>
+								<span class='url'>$url1</span>
+								<span class='description'>&nbsp;$description</span>
 
 							</div>";
 

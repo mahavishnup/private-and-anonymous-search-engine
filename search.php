@@ -22,6 +22,11 @@ $page = isset($_GET["page"]) ? $_GET["page"] : 1;
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+	
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
 	<div class="wrapper">
@@ -54,7 +59,7 @@ $page = isset($_GET["page"]) ? $_GET["page"] : 1;
 
 			</div>
 
-			<div class="tabsContainer">
+			<div class="tabsContainer container">
 
 				<ul class="tabList">
 
@@ -74,12 +79,13 @@ $page = isset($_GET["page"]) ? $_GET["page"] : 1;
 
 			</div>
 		</div>
+
 		<div class="mainResultsSection">
 
 			<?php
 			if($type == "sites") {
 				$resultsProvider = new SiteResultsProvider($con);
-				$pageSize = 20;
+				$pageSize = 15;
 			}
 			elseif ($type == "images") {
 				$resultsProvider = new ImageResultsProvider($con);
@@ -87,7 +93,7 @@ $page = isset($_GET["page"]) ? $_GET["page"] : 1;
 			}
 			else {
 				$resultsProvider = new VideoResultsProvider($con);
-				$pageSize = 30;
+				$pageSize = 25;
 			}
 
 			$numResults = $resultsProvider->getNumResults($term);
