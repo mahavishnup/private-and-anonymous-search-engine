@@ -1,5 +1,10 @@
 <?php
+session_start();
 include("config.php");
+if(!isset($_SESSION["uid"]))
+{
+    header("location:index.php");
+}
 include("classes/DomDocumentParser.php");
 
 $alreadyCrawled = array();

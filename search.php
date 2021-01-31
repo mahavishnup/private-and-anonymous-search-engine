@@ -1,5 +1,10 @@
 <?php
+session_start();
 include("config.php");
+if(!isset($_SESSION["uid"]))
+{
+    header("location:index.php");
+}
 include("classes/SiteResultsProvider.php");
 include("classes/ImageResultsProvider.php");
 include("classes/VideoResultsProvider.php");
@@ -18,6 +23,7 @@ $page = isset($_GET["page"]) ? $_GET["page"] : 1;
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/png" href="assets/images/privacy.svg"/>
 	<title>Welcome to Moodle</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
